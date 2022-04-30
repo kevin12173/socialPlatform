@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    /* *{outline: 1px solid red;} */
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+    /* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section {
+        display: block;
+    }
+    body {
+        line-height: 1;
+        background-image: url(./bg.svg);
+    }
+    ol, ul {
+        list-style: none;
+    }
+    blockquote, q {
+        quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    .borderWidth{
+        width: 900px;
+    }
+    .navbar{
+        height: 60px;
+
+        margin-bottom: 49px;
+    }
+    .flex{
+        display: flex;
+    }
+    .spaceBetween{
+        justify-content: space-between;
+    }
+    .center{
+        margin: auto;
+    }
+    .verticalAlignMiddle{
+        vertical-align: middle;
+    }
+    .verticalAlignTop{
+        vertical-align:top;
+    }
+    .h-60{
+        height: 36px;
+    }
+    .alignItemsCenter{
+        align-items: center
+    }
+    .avatarSmallSize{
+        width: 30px;
+    }
+    .avatarBigSize{
+        width: 45px;
+    }
+    
+    
+    .selectPost{
+        width: 168px;
+        height: 46px;
+        padding-left: 6px;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border: 2px solid #000400;
+        margin-right: 12px;
+    }
+    .inputPost{
+        width: 301px;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border: 2px solid #000400;
+        height: 40px;
+        padding-left: 8px;
+    }
+    .buttonPost{
+        width: 46px;
+        height: 46px;
+        background: #03438D 0% 0% no-repeat padding-box;
+        border: 2px solid #000400;
+        color: #FFFFFF;
+    }
+    .searchPost{
+        display: inline-block;
+        width: 365px;
+    }
+    article{
+        width: 533px;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        box-shadow: 0px 3px 0px #000400;
+        border: 2px solid #000400;
+        border-radius: 8px;
+        margin-bottom: 16px;
+    }
+    .inlineBlock{
+        display: inline-block
+    }
+    .name{
+        font: normal normal bold 16px/24px Noto Sans TC;
+        font-weight: bold;
+    }
+    .date{
+        font: normal normal normal 12px/20px Baloo Da 2;
+        font-size: 12px;
+        color: #9B9893;
+    }
+    
+    .backgroundWhite{
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+    }
+    .backgroundGray{
+        background: #EFECE7 0% 0% no-repeat padding-box;
+    }
+    .backgroundYellow{
+        background: #EEC32A 0% 0% no-repeat padding-box;
+    }
+    .black{
+        color:#000400;
+    }
+    .boxShadow{
+        box-shadow: 0px 3px 0px #000400;
+    }
+    .rightList{
+        width: 309px;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        box-shadow: 0px 3px 0px #000400;
+        border: 2px solid #000400;
+        border-radius: 8px;
+        margin-bottom: 16px;
+    }
+    section{
+        display: inline-block;
+    }
+    .btn{
+        background: #03438D 0% 0% no-repeat padding-box;
+        box-shadow: -2px 2px 0px #000400;
+        border: 2px solid #000400;
+        border-radius: 8px;
+        width: 260px;
+        height: 54px;
+        color: #FFFFFF;
+        font-size: 16px;
+    }
+    .h100{
+        height: 100%;
+    }
+    .w40{
+        width: 40px;
+    }
+    .w156{
+        width: 156px;
+    }
+    .w128{
+        width: 128px;
+    }
+    .w280{
+        width: 280px;
+    }
+    .mt-4{
+        margin-top: 4px;
+    }
+    .mt-20{
+        margin-top: 20px;
+    }
+    .ml-16{
+        margin-left: 16;
+    }
+    .ml-51{
+        margin-left: 51px;
+    }
+    .mr-8{
+        margin-right: 8.5px;
+    }
+    .mr-16{
+        margin-right: 16px;
+    }
+    .mb-16{
+        margin-bottom: 16px;
+    }
+    .mb-22{
+        margin-bottom: 22px;
+    }
+    .mb-24{
+        margin-bottom: 24px;
+    }
+    .p-16{
+        padding: 16px;
+    }
+    .p-24{
+        padding: 24px;
+    }
+    .fz-0{
+        font-size: 0px;
+    }
+    .fz-16{
+        font-size: 16px;
+    }
+    .fz-20{
+        font-size: 20px;
+    }
+    
+</style>
+<body class="">
+    <header class="navbar backgroundWhite boxShadow">
+        <div class="h100 flex spaceBetween alignItemsCenter center borderWidth">
+            <img class="h-60" src="./MetaWall.svg" alt="">
+            <div>
+                <img class="verticalAlignMiddle avatarSmallSize" src="./user.png" alt="">
+                <span class="verticalAlignMiddle boxShadow">Member</span>
+                
+            </div>
+            
+        </div>
+        
+    </header>
+    <div class="center borderWidth">
+        
+        <main>
+            <section class="mr-16">
+                <div class="fz-0 mb-16">
+                    <select class="selectPost verticalAlignMiddle">
+                        <option value="最新貼文">最新貼文</option>
+                    </select>
+                    <div class="searchPost">
+                        <input class="inputPost verticalAlignMiddle" type="text" placeholder="搜尋貼文">
+                        <button class="buttonPost verticalAlignMiddle"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                </div>
+                
+                
+                <article>
+                    <div class="p-24">
+                        <div class="mb-16">
+                            <img class="verticalAlignMiddle mr-16" src="./user.png" alt="">
+                            <div class="inlineBlock verticalAlignMiddle">
+                                <p class="name">邊緣小杰</p>
+                                <p class="date">2022/1/10 12:00</p>
+                            </div>
+                            
+                        </div>
+                        <div class="mb-16">
+                            <p>外面看起來就超冷...</p>
+                            <p>我決定回被窩繼續睡...>.<</p>
+                        </div>
+                        <img src="./image.png" alt="">
+                        <div class="mt-20">
+                            <i class="fas fa-thumbs-up fz-20"></i>
+                            <span class="">12</span>
+                        </div>
+                        <div class="mt-20 fz-0 mb-16">
+                            <img class="verticalAlignMiddle w40 mr-8" src="./user.png" alt="">
+                            <input class="inputPost verticalAlignMiddle fz-16 w280" type="text" placeholder="留言...">
+                            <button class=" buttonPost w128 verticalAlignMiddle fz-16">留言</button>
+                        </div>
+                        
+                        <div class="backgroundGray p-24 mb-16">
+                            <img class="verticalAlignMiddle w40 mr-8 ml-16" src="./user5.png" alt="">
+                            <div class="inlineBlock verticalAlignMiddle">
+                                <p class="name">希琳</p>
+                                <p class="date">2022/1/11 10:00</p>
+                            </div>
+                            <div class="mt-4 name ml-51">
+                                <p>真的～我已經準備冬眠了</p>
+                            </div>
+                        </div>
+                        <div class="backgroundGray p-24 mb-16">
+                            <img class="verticalAlignMiddle w40 mr-8 ml-16" src="./user5-2.png" alt="">
+                            <div class="inlineBlock verticalAlignMiddle">
+                                <p class="name">波吉</p>
+                                <p class="date">2022/1/11 10:00</p>
+                            </div>
+                            <div class="mt-4 name ml-51">
+                                <p>會嗎？我沒穿衣服都不覺得冷</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </article>
+                
+                <article>
+                    <div class="p-24">
+                        <div class="mb-16">
+                            <img class="verticalAlignMiddle mr-16" src="./user5.png" alt="">
+                            <div class="inlineBlock verticalAlignMiddle">
+                                <p class="name">米卡莎</p>
+                                <p class="date">2022/1/10 12:00</p>
+                            </div>
+                            
+                        </div>
+                        <div class="mb-16">
+                            <p>搶到想要的 NFT 啦！ya~~</p>
+                        </div>
+                        <img src="./image2.png" alt="">
+                        <div class="mt-20">
+                            <i class="fas fa-thumbs-up fz-20"></i>
+                            <span class="">成為第一個按讚的朋友</span>
+                        </div>
+                        <div class="mt-20 fz-0 mb-16">
+                            <img class="verticalAlignMiddle w40 mr-8" src="./user.png" alt="">
+                            <input class="inputPost verticalAlignMiddle fz-16 w280" type="text" placeholder="留言..." value="好羨慕ㄛ!!">
+                            <button class=" buttonPost w128 verticalAlignMiddle fz-16 backgroundYellow black">留言</button>
+                        </div>
+                        
+                    </div>
+                    
+                </article>
+    
+
+            </section>
+            <section class="rightList verticalAlignTop">
+                <div class="p-24">
+                    <button class="btn mb-24">張貼動態</button>
+                    <div class="mb-22">
+                        <img class="verticalAlignMiddle mr-16" src="./user.png" alt="">
+                        <div class="inlineBlock verticalAlignMiddle">
+                            <p class="name">邊緣小杰</p>
+                        </div>
+                        
+                    </div>
+                    <div class="mb-22">
+                        <img class="verticalAlignMiddle mr-16" src="./user.png" alt="">
+                        <div class="inlineBlock verticalAlignMiddle">
+                            <p class="name">追蹤名單</p>
+                        </div>
+                        
+                    </div>
+                    <div class="mb-22">
+                        <img class="verticalAlignMiddle mr-16" src="./user.png" alt="">
+                        <div class="inlineBlock verticalAlignMiddle">
+                            <p class="name">我按讚的文章</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+        </main>
+
+    </div>
+    
+</body>
+</html>
